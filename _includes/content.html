@@ -1,0 +1,21 @@
+{%- comment -%}
+  Renders a post's or page's body. Authors write root-relative paths such as
+  /assets/img/posts/<slug>/figure-1.png; when the site is served under a
+  base path (for example jmlrorg.github.io/tmlr-blog/ before the custom domain
+  is in place), those paths are prefixed with it. Protocol-relative URLs
+  (//cdn...) are left alone. With an empty baseurl nothing changes.
+  Usage: {% include content.html body=content %}
+{%- endcomment -%}
+{%- assign body = include.body -%}
+{%- if site.baseurl and site.baseurl != "" -%}
+  {%- assign src_prefix = 'src="' | append: site.baseurl | append: '/' -%}
+  {%- assign href_prefix = 'href="' | append: site.baseurl | append: '/' -%}
+  {%- assign body = body
+        | replace: 'src="//', 'src="PROTOCOLRELATIVE'
+        | replace: 'href="//', 'href="PROTOCOLRELATIVE'
+        | replace: 'src="/', src_prefix
+        | replace: 'href="/', href_prefix
+        | replace: 'src="PROTOCOLRELATIVE', 'src="//'
+        | replace: 'href="PROTOCOLRELATIVE', 'href="//' -%}
+{%- endif -%}
+{{ body }}
