@@ -1,0 +1,26 @@
+{%- comment -%}
+  Light/dark switch. Dark is the default; the choice is stored in localStorage
+  under "theme" and applied before the first paint by the small script in
+  _includes/head.html. The button itself lives in _includes/header.html.
+{%- endcomment -%}
+<script>
+  (function () {
+    var root = document.documentElement;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    var button = document.querySelector('.theme-toggle');
+    if (!button) return;
+    function apply(theme) {
+      if (theme === 'light') { root.setAttribute('data-theme', 'light'); } else { root.removeAttribute('data-theme'); }
+      if (meta) { meta.setAttribute('content', theme === 'light' ? '#ffffff' : '#0b1640'); }
+      var label = theme === 'light' ? 'Switch to the dark theme' : 'Switch to the light theme';
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
+    }
+    apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    button.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      apply(next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>

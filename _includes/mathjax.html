@@ -1,0 +1,19 @@
+{%- comment -%}
+  MathJax 3, loaded only on pages with `math: true` in their front matter.
+  kramdown (math_engine: mathjax in _config.yml) turns $$...$$ into
+  \(...\) for inline math and \[...\] for display math, which are MathJax's
+  default delimiters.
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>

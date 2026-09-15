@@ -1,0 +1,235 @@
+/* Dark code theme (default): rougify style github.dark */
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #c9d1d9;
+  background-color: #161b22;
+}
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+  color: #ff7b72;
+}
+.highlight .gr {
+  color: #f0f6fc;
+}
+.highlight .gd {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+.highlight .nb {
+  color: #ffa657;
+}
+.highlight .nc {
+  color: #ffa657;
+}
+.highlight .no {
+  color: #ffa657;
+}
+.highlight .nn {
+  color: #ffa657;
+}
+.highlight .sr {
+  color: #7ee787;
+}
+.highlight .na {
+  color: #7ee787;
+}
+.highlight .nt {
+  color: #7ee787;
+}
+.highlight .gi {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+.highlight .ges {
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .kc {
+  color: #79c0ff;
+}
+.highlight .l, .highlight .ld, .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #79c0ff;
+}
+.highlight .sb {
+  color: #79c0ff;
+}
+.highlight .bp {
+  color: #79c0ff;
+}
+.highlight .ne {
+  color: #79c0ff;
+}
+.highlight .nl {
+  color: #79c0ff;
+}
+.highlight .py {
+  color: #79c0ff;
+}
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+  color: #79c0ff;
+}
+.highlight .o, .highlight .ow {
+  color: #79c0ff;
+}
+.highlight .gh {
+  color: #1f6feb;
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #1f6feb;
+  font-weight: bold;
+}
+.highlight .s, .highlight .sa, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
+  color: #a5d6ff;
+}
+.highlight .nd {
+  color: #d2a8ff;
+}
+.highlight .nf, .highlight .fm {
+  color: #d2a8ff;
+}
+.highlight .err {
+  color: #f0f6fc;
+  background-color: #8e1519;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #8b949e;
+}
+.highlight .gl {
+  color: #8b949e;
+}
+.highlight .gt {
+  color: #8b949e;
+}
+.highlight .ni {
+  color: #c9d1d9;
+}
+.highlight .si {
+  color: #c9d1d9;
+}
+.highlight .ge {
+  color: #c9d1d9;
+  font-style: italic;
+}
+.highlight .gs {
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+/* Light code theme, active when <html data-theme="light">: rougify style github --scope ':root[data-theme="light"] .highlight' */
+:root[data-theme="light"] .highlight table td { padding: 5px; }
+:root[data-theme="light"] .highlight table pre { margin: 0; }
+:root[data-theme="light"] .highlight, :root[data-theme="light"] .highlight .w {
+  color: #24292f;
+  background-color: #f6f8fa;
+}
+:root[data-theme="light"] .highlight .k, :root[data-theme="light"] .highlight .kd, :root[data-theme="light"] .highlight .kn, :root[data-theme="light"] .highlight .kp, :root[data-theme="light"] .highlight .kr, :root[data-theme="light"] .highlight .kt, :root[data-theme="light"] .highlight .kv {
+  color: #cf222e;
+}
+:root[data-theme="light"] .highlight .gr {
+  color: #f6f8fa;
+}
+:root[data-theme="light"] .highlight .gd {
+  color: #82071e;
+  background-color: #ffebe9;
+}
+:root[data-theme="light"] .highlight .nb {
+  color: #953800;
+}
+:root[data-theme="light"] .highlight .nc {
+  color: #953800;
+}
+:root[data-theme="light"] .highlight .no {
+  color: #953800;
+}
+:root[data-theme="light"] .highlight .nn {
+  color: #953800;
+}
+:root[data-theme="light"] .highlight .sr {
+  color: #116329;
+}
+:root[data-theme="light"] .highlight .na {
+  color: #116329;
+}
+:root[data-theme="light"] .highlight .nt {
+  color: #116329;
+}
+:root[data-theme="light"] .highlight .gi {
+  color: #116329;
+  background-color: #dafbe1;
+}
+:root[data-theme="light"] .highlight .ges {
+  font-weight: bold;
+  font-style: italic;
+}
+:root[data-theme="light"] .highlight .kc {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .l, :root[data-theme="light"] .highlight .ld, :root[data-theme="light"] .highlight .m, :root[data-theme="light"] .highlight .mb, :root[data-theme="light"] .highlight .mf, :root[data-theme="light"] .highlight .mh, :root[data-theme="light"] .highlight .mi, :root[data-theme="light"] .highlight .il, :root[data-theme="light"] .highlight .mo, :root[data-theme="light"] .highlight .mx {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .sb {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .bp {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .ne {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .nl {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .py {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .nv, :root[data-theme="light"] .highlight .vc, :root[data-theme="light"] .highlight .vg, :root[data-theme="light"] .highlight .vi, :root[data-theme="light"] .highlight .vm {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .o, :root[data-theme="light"] .highlight .ow {
+  color: #0550ae;
+}
+:root[data-theme="light"] .highlight .gh {
+  color: #0550ae;
+  font-weight: bold;
+}
+:root[data-theme="light"] .highlight .gu {
+  color: #0550ae;
+  font-weight: bold;
+}
+:root[data-theme="light"] .highlight .s, :root[data-theme="light"] .highlight .sa, :root[data-theme="light"] .highlight .sc, :root[data-theme="light"] .highlight .dl, :root[data-theme="light"] .highlight .sd, :root[data-theme="light"] .highlight .s2, :root[data-theme="light"] .highlight .se, :root[data-theme="light"] .highlight .sh, :root[data-theme="light"] .highlight .sx, :root[data-theme="light"] .highlight .s1, :root[data-theme="light"] .highlight .ss {
+  color: #0a3069;
+}
+:root[data-theme="light"] .highlight .nd {
+  color: #8250df;
+}
+:root[data-theme="light"] .highlight .nf, :root[data-theme="light"] .highlight .fm {
+  color: #8250df;
+}
+:root[data-theme="light"] .highlight .err {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+:root[data-theme="light"] .highlight .c, :root[data-theme="light"] .highlight .ch, :root[data-theme="light"] .highlight .cd, :root[data-theme="light"] .highlight .cm, :root[data-theme="light"] .highlight .cp, :root[data-theme="light"] .highlight .cpf, :root[data-theme="light"] .highlight .c1, :root[data-theme="light"] .highlight .cs {
+  color: #6e7781;
+}
+:root[data-theme="light"] .highlight .gl {
+  color: #6e7781;
+}
+:root[data-theme="light"] .highlight .gt {
+  color: #6e7781;
+}
+:root[data-theme="light"] .highlight .ni {
+  color: #24292f;
+}
+:root[data-theme="light"] .highlight .si {
+  color: #24292f;
+}
+:root[data-theme="light"] .highlight .ge {
+  color: #24292f;
+  font-style: italic;
+}
+:root[data-theme="light"] .highlight .gs {
+  color: #24292f;
+  font-weight: bold;
+}

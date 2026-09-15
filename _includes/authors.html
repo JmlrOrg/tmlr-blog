@@ -1,0 +1,25 @@
+{%- comment -%}
+  Renders a byline from front matter `authors`, which may be a single string,
+  a list of strings, or a list of {name, url} maps (mixing is fine):
+
+    authors: Jane Doe
+    authors: [Jane Doe, John Roe]
+    authors:
+      - name: Jane Doe
+        url: https://example.org/jane
+      - John Roe
+{%- endcomment -%}
+{%- assign authors = include.authors -%}
+{%- if authors.first == nil -%}{%- assign authors = authors | split: '|||' -%}{%- endif -%}
+{%- for author in authors -%}
+  {%- if author.name -%}
+    {%- if author.url -%}<a href="{{ author.url }}">{{ author.name }}</a>{%- else -%}{{ author.name }}{%- endif -%}
+  {%- else -%}
+    {{ author }}
+  {%- endif -%}
+  {%- unless forloop.last -%}
+    {%- if forloop.rindex == 2 -%}
+      {%- if forloop.length == 2 %} and {% else %}, and {% endif -%}
+    {%- else -%}, {% endif -%}
+  {%- endunless -%}
+{%- endfor -%}

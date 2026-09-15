@@ -1,0 +1,81 @@
+# Site settings for blog.tmlr.org
+# Changes to this file require restarting `jekyll serve`.
+
+title: TMLR Blog
+tagline: News and editorial notes from TMLR   # used in the home page <title>
+description: >-
+  News, announcements, and editorial notes from the Transactions on Machine
+  Learning Research (TMLR).
+url: "https://blog.tmlr.org"   # absolute URLs in the feed, sitemap and meta tags
+baseurl: ""                     # set automatically by the deploy workflow
+lang: en
+timezone: UTC
+
+# Posts are dated by the editors, sometimes ahead of the day the build runs
+# (e.g. a post dated "today" pushed late in the evening in a US timezone is
+# already "tomorrow" in UTC). Never silently drop them.
+future: true
+
+permalink: /:year/:title/
+
+# Navigation shown in the header (absolute URLs are allowed too).
+nav:
+  - title: Posts
+    url: /
+  - title: RSS
+    url: /feed.xml
+
+# jekyll-seo-tag
+logo: /assets/img/tmlr.jpg
+twitter:
+  username: TmlrOrg
+  card: summary
+social:
+  name: Transactions on Machine Learning Research
+  links:
+    - https://twitter.com/TmlrOrg
+    - https://sigmoid.social/@tmlrpub
+    - https://github.com/JmlrOrg/tmlr
+
+# Same Google Analytics property as jmlr.org/tmlr. Only emitted in production
+# builds (JEKYLL_ENV=production, which the deploy workflow sets). Remove or
+# change the ID to use a separate property.
+google_analytics: G-F15C32CP9G
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false          # a newline inside a paragraph is not a line break
+  math_engine: mathjax      # $$ ... $$ is rendered by MathJax on pages with `math: true`
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  excerpt_only: false       # full post content in the feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      image: /assets/img/tmlr.jpg   # default preview image for social cards
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - .bundle/

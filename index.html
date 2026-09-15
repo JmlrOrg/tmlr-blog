@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{%- comment -%}
+  The card at the top shows the post with `featured: true` in its front matter
+  (the newest such post if there are several), or simply the newest post.
+{%- endcomment -%}
+{%- assign featured = site.posts | where_exp: "post", "post.featured == true" | first %}
+{%- if featured == nil %}{% assign featured = site.posts.first %}{% endif %}
+{%- if featured %}
+{%- assign summary = featured.description | default: featured.excerpt | strip_html | normalize_whitespace %}
+{%- if summary == "" %}{% assign summary = featured.content | strip_html | normalize_whitespace %}{% endif %}
+<section class="featured">
+  <a class="featured-image" href="{{ featured.url | relative_url }}"><img src="{{ featured.image | default: '/assets/img/tmlr.jpg' | relative_url }}" alt=""></a>
+  <div>
+    <div class="label">Featured</div>
+    <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+    <p>{{ summary | truncatewords: 45 }}</p>
+    <p class="meta">
+      <time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%-d %B %Y" }}</time>
+      {%- if featured.authors %} &middot; by {% include authors.html authors=featured.authors %}{% endif %}
+    </p>
+  </div>
+</section>
+{%- endif %}
+
+{%- assign rest = site.posts | where_exp: "post", "post.url != featured.url" %}
+{%- assign posts_by_year = rest | group_by_exp: "post", "post.date | date: '%Y'" %}
+{%- for year in posts_by_year %}
+<section class="year">
+  <h2 class="year-heading">{{ year.name }}</h2>
+  {%- for post in year.items %}
+  {%- assign summary = post.description | default: post.excerpt | strip_html | normalize_whitespace %}
+  {%- if summary == "" %}{% assign summary = post.content | strip_html | normalize_whitespace %}{% endif %}
+  <article class="post-summary">
+    <p class="meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      {%- if post.authors %} &middot; by {% include authors.html authors=post.authors %}{% endif %}
+    </p>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ summary | truncatewords: 60 }}</p>
+  </article>
+  {%- endfor %}
+</section>
+{%- endfor %}

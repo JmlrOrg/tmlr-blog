@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 -%}
+{%- if minutes < 1 %}{% assign minutes = 1 %}{% endif -%}
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    {% include post-meta.html post=page reading_time=minutes %}
+  </header>
+
+  <div class="post-content">
+{{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <nav class="pager" aria-label="Adjacent posts">
+      {%- if page.previous %}
+      <a class="older" rel="prev" href="{{ page.previous.url | relative_url }}"><span class="label">Older</span>{{ page.previous.title }}</a>
+      {%- endif %}
+      {%- if page.next %}
+      <a class="newer" rel="next" href="{{ page.next.url | relative_url }}"><span class="label">Newer</span>{{ page.next.title }}</a>
+      {%- endif %}
+    </nav>
+  </footer>
+</article>

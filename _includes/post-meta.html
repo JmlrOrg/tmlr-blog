@@ -1,0 +1,10 @@
+{%- comment -%}
+  Date, byline and reading time for a post.
+  Usage: {% include post-meta.html post=page reading_time=minutes %}
+{%- endcomment -%}
+{%- assign post = include.post -%}
+<p class="meta">
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+  {%- if post.authors %} &middot; by {% include authors.html authors=post.authors %}{% endif %}
+  {%- if include.reading_time %} &middot; {{ include.reading_time }} min read{% endif %}
+</p>
