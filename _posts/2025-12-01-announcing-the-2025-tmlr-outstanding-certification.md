@@ -1,6 +1,7 @@
 ---
 title: Announcing the 2025 TMLR Outstanding Certification
 date: 2025-12-01
+authors: the 2025 TMLR Outstanding Paper Committee
 tags:
 - certifications
 - outstanding-certification

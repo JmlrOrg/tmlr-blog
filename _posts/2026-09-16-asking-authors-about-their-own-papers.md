@@ -2,13 +2,12 @@
 title: Asking Authors About Their Own Papers
 date: 2026-09-16
 authors:
-- name: TMLR Editors-in-Chief
-  url: https://jmlr.org/tmlr/editorial-board.html
+- name: Nihar B. Shah
+  url: https://cs.cmu.edu/~nihars
 tags: []
+description: An Editor-in-Chief invited the authors of ten submissions headed for desk rejection to discuss their papers; most could not answer basic or technical questions about their own work.
 medium_url: https://medium.com/@TmlrOrg/asking-authors-about-their-own-papers-3d2e04e5dee0
 ---
-
-By [Nihar B. Shah](https://cs.cmu.edu/~nihars)
 
 **Summary:**
 

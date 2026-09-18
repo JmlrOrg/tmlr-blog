@@ -1,6 +1,7 @@
 ---
 title: Announcing the First TMLR Outstanding Certification
 date: 2023-07-05
+authors: the 2023 TMLR Outstanding Paper Committee
 tags:
 - certifications
 - outstanding-certification

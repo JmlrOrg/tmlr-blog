@@ -1,6 +1,7 @@
 ---
 title: Announcing the 2024 TMLR Outstanding Certification
 date: 2024-12-19
+authors: the 2024 TMLR Outstanding Paper Committee
 tags:
 - certifications
 - outstanding-certification
