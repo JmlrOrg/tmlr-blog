@@ -1,6 +1,7 @@
 ---
 title: Asking Authors About Their Own Papers
 date: 2026-09-16
+featured: true   # pinned to the card at the top of the front page
 authors:
 - name: Nihar B. Shah
   url: https://cs.cmu.edu/~nihars

@@ -25,6 +25,9 @@ nav:
   - title: RSS
     url: /feed.xml
 
+# Picture shown on the front-page card when the featured post has no `image` of its own
+featured_placeholder: /assets/img/featured-default.jpg
+
 # jekyll-seo-tag
 logo: /assets/img/tmlr.jpg
 twitter:

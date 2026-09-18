@@ -47,7 +47,7 @@ is written as `$$ ... $$` (inline, or on its own lines for display math).
 
 The card at the top of the front page shows the post with `featured: true`
 (the newest one if several have it), or the newest post when none does. Its
-picture is the post's `image`; posts without one get the TMLR logo.
+picture is the post's `image`, letterboxed so charts stay readable.
 
 ## Local Preview
 

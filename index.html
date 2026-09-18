@@ -10,8 +10,18 @@ layout: default
 {%- if featured %}
 {%- assign summary = featured.description | default: featured.excerpt | strip_html | normalize_whitespace %}
 {%- if summary == "" %}{% assign summary = featured.content | strip_html | normalize_whitespace %}{% endif %}
+{%- comment -%}
+  A post's own `image` is shown letterboxed (charts stay readable). Posts
+  without one (their image is just the site logo default) get the placeholder
+  artwork from _config.yml, filling the frame.
+{%- endcomment -%}
+{%- if featured.image and featured.image != site.logo %}
+  {%- assign card_image = featured.image %}{% assign card_class = "featured-image" %}
+{%- else %}
+  {%- assign card_image = site.featured_placeholder | default: "/assets/img/featured-default.jpg" %}{% assign card_class = "featured-image is-placeholder" %}
+{%- endif %}
 <section class="featured">
-  <a class="featured-image" href="{{ featured.url | relative_url }}"><img src="{{ featured.image | default: '/assets/img/tmlr.jpg' | relative_url }}" alt=""></a>
+  <a class="{{ card_class }}" href="{{ featured.url | relative_url }}"><img src="{{ card_image | relative_url }}" alt=""></a>
   <div>
     <div class="label">Featured</div>
     <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>

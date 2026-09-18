@@ -9,7 +9,6 @@ tags:
 - submissions
 description: With submissions to TMLR growing rapidly, the journal is introducing annual per-author submission quotas.
 image: /assets/img/posts/annual-author-submission-quotas-for-tmlr/figure-1.png
-featured: true   # pinned to the card at the top of the front page
 medium_url: https://medium.com/@TmlrOrg/annual-author-submission-quotas-for-tmlr-1db785e51548
 ---
 
