@@ -5,3 +5,4 @@ _site/
 vendor/
 .bundle/
 scripts/
+.DS_Store
